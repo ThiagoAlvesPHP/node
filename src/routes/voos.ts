@@ -6,6 +6,10 @@ const router = express.Router();
 router.get('/:from/:to', (req, res) => {
     let {from, to} = req.params;
 
+    console.log("PARAMS", req.params);
+    console.log("QUERYS", req.query);
+    console.log("BODY", req.body);
+
     res.json({
         flight: {
             from: from.toUpperCase(),

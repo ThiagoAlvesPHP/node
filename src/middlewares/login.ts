@@ -1,7 +1,7 @@
 import {RequestHandler} from "express";
 
 export const login: RequestHandler = (req, res, next) => {
-    let logged = false;
+    let logged = true;
     if (logged) {
         next();
     } else {
