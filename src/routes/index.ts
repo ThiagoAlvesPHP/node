@@ -2,6 +2,7 @@ import express, {RequestHandler} from "express";
 import productsRouter from "./products";
 import voosRouter from "./voos";
 import {login} from "../middlewares/login";
+import contactsRouter from "./contacts";
 
 const router = express.Router();
 
@@ -10,6 +11,8 @@ const router = express.Router();
 
 router.use('/products', productsRouter);
 router.use('/voos', voosRouter);
+
+router.use('/contact', contactsRouter);
 
 router.get('/', (req, res) => {
     console.log("PARAMS", req.params);
